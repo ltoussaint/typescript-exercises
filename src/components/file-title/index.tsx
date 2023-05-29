@@ -15,7 +15,8 @@ const FileTitleWrapper = styled.div`
 const FileTitleLabel = styled.span`
     margin-left: 20px;
     font-size: 12px;
-    color: #339900;
+    color: red;
+    font-weight: bold;
 `;
 
 export function FileTitle({filename, readOnly}: {filename: string; readOnly: boolean}) {

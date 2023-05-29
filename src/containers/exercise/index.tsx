@@ -65,7 +65,7 @@ const ExerciseButton = styled.button`
 `;
 
 function calculateModifiedFilenames(exerciseNumber: number, fileTree: FileTree) {
-    const files = exerciseStructures[exerciseNumber];
+    const files = exerciseStructures[exerciseNumber].files;
     const result: Record<string, true> = {};
     for (const [filename, {content}] of Object.entries(fileTree)) {
         if (content !== files[filename].content) {
@@ -116,7 +116,7 @@ export function Exercise({exerciseNumber}: {exerciseNumber: number}) {
             <CollapsiblePanel id='files' header='Files' orientation='vertical'>
                 <FileTreeView
                     selectedFilename={selectedFilename}
-                    fileTree={exerciseStructures[exerciseNumber]}
+                    fileTree={exerciseStructures[exerciseNumber].files}
                     onSelectFilename={goToFile}
                     modifiedFilenames={calculateModifiedFilenames(exerciseNumber, fileTree)}
                     revertFile={exercise.revert}

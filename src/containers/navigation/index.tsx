@@ -63,7 +63,7 @@ export function Navigation() {
                                     current={Number(exerciseNumber) === Number(params.exercise)}
                                     onClick={() => exercisesProgress.goToExercise(Number(exerciseNumber))}
                                     key={exerciseNumber}>
-                                    {exerciseNumber}
+                                    {exerciseNumber} - {exerciseStructures[Number(exerciseNumber)]?.name}
                                 </NavBarItem>
                             ))}
                         </>

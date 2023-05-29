@@ -1,0 +1,13 @@
+{
+    "files.eol": "\n",
+    "eslint.validate": ["vue", "javascript", "html"],
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "files.trimTrailingWhitespace": true,
+    "files.watcherExclude": {
+      "**/node_modules/**": true,
+      "**/.nuxt/**": true,
+      "**/.static-storybook/**": true
+    }
+  }
+  

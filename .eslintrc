@@ -76,21 +76,24 @@
     "no-restricted-globals": ["error", "name", "toString", "pending"],
     "prefer-template": "error",
     "import/no-relative-parent-imports": "error",
-    "import/order": ["error", {
-      "groups": ["builtin", "external", "internal", "sibling"],
-      "pathGroups": [
-        {
-          "pattern": "{components,containers,exercises,lib,observables,operators}/**",
-          "group": "internal",
-          "position": "after"
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "sibling"],
+        "pathGroups": [
+          {
+            "pattern": "{components,containers,exercises,exercises-bk,lib,observables,operators}/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["parent", "sibling", "index"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
         }
-      ],
-      "pathGroupsExcludedImportTypes": ["parent", "sibling", "index"],
-      "alphabetize": {
-        "order": "asc",
-        "caseInsensitive": true
       }
-    }]
+    ]
   },
   "settings": {
     "react": {
